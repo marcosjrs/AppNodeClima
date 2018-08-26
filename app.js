@@ -10,5 +10,5 @@ const args = require("yargs").options({direccion:{
 geoposicion
     .getCoordenadas(args.direccion)
     .then( (infoCoordenadas)=> tiempo.getTemperatura(infoCoordenadas.latitud,infoCoordenadas.longitud) )
-    .then( (infoTiempo) => { console.log(`Temperatura: $(infoTiempo)º `) } )
+    .then( (infoTiempo) => { console.log(`Temperatura: ${infoTiempo}º `) } )
     .catch( (er) => console.log(er) )
